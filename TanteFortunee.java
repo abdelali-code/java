@@ -15,12 +15,14 @@ public class TanteFortunee {
 		int cafe = 10;
 		int recharge = 10;
 		int trame = 8;
+		
+		int sum = cafe + recharge + trame;
 		int i = 0;
 		
-		if (reste < 28) {
+		if (reste < sum) {
 			System.out.println("il vous restera " + reste + "MAD pour les roses blanches");
 		}else {
-			while (reste >= 28) {
+			while (reste >= sum) {
 				if (i == 4) {
 					i = 0;
 					numTrame++;
@@ -40,10 +42,10 @@ public class TanteFortunee {
 			}
 			
 			System.out.println("vous pouvez acheter");
-			System.out.println(numCafe + "cafés");
-			System.out.println(numRecharge + "Carte de recharge prépayer");
-			System.out.println(numTrame + "billets de TRAME");
-			System.out.println("il vous restera " + reste + "MAD pour les roses blanches");
+			System.out.println(numCafe + " cafés");
+			System.out.println(numRecharge + " Carte de recharge prépayer");
+			System.out.println(numTrame + " billets de TRAME");
+			System.out.println("il vous restera " + reste + " MAD pour les roses blanches");
 		}
 		
 
