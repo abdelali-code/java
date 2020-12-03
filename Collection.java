@@ -15,7 +15,7 @@ public class Collection<Item1, Item2> {
 	public static void main(String[] args) {
 
 		// Creating a list
-		List<String> ls = new ArrayList<String>();
+		ArrayList<String> ls = new ArrayList<String>();
 
 		ls.add("janvier");
 		ls.add("févier");
