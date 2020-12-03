@@ -9,6 +9,7 @@ public class TanteFortunee {
 		
 		int montant = scanner.nextInt();
 		int reste = montant / 4;
+		int fleur = montant % 4;
 		System.out.println(reste);
 		int numCafe, numRecharge, numTrame;
 		numCafe = numRecharge = numTrame = 0;
@@ -38,12 +39,13 @@ public class TanteFortunee {
 				numTrame++;
 				reste -= 8;
 			}
+			fleur += reste;
 			
 			System.out.println("vous pouvez acheter");
 			System.out.println(numCafe + "cafés");
 			System.out.println(numRecharge + "Carte de recharge prépayer");
 			System.out.println(numTrame + "billets de TRAME");
-			System.out.println("il vous restera " + reste + "MAD pour les roses blanches");
+			System.out.println("il vous restera " + fleur + "MAD pour les roses blanches");
 		}
 		
 
