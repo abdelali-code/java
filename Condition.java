@@ -13,9 +13,9 @@ public class Condition {
 		// to consume the new line;
 		sc.nextLine();
  		System.out.print("avec remise (oui, non) ?: "); 
- 		is_remise = sc.next();
+ 		is_remise = sc.nextLine();
  	    // to consume the new line;
- 		sc.nextLine();
+ 		//sc.nextLine();
  		is_remise = is_remise.toLowerCase();
  		is_remise = is_remise.replace("\n", "");
  
