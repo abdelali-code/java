@@ -10,7 +10,9 @@ public class TanteFortunee {
 		int montant = scanner.nextInt();
 		int reste = montant / 4;
 		int fleur = montant % 4;
-		System.out.println(reste);
+		// quand on divise par 3, si il ya reste l'ajout a fleur prix;
+		fleur += reste % 3;
+		//System.out.println(reste);
 		int numCafe, numRecharge, numTrame;
 		numCafe = numRecharge = numTrame = 0;
 		int cafe = 10;
@@ -19,36 +21,40 @@ public class TanteFortunee {
 		
 		int sum = cafe + recharge + trame;
 		int i = 0;
+
 		
 		if (reste < sum) {
 			System.out.println("il vous restera " + reste + "MAD pour les roses blanches");
-		}else {
-			while (reste >= sum) {
-				if (i == 4) {
-					i = 0;
-					numTrame++;
-					reste -= 8;
-				}
-				else{	
-					numCafe++;
-					numRecharge++;
-					numTrame++;
-					reste -= 28;
-					i++;
-				}
-			}
-			if (reste >= 8 && (numCafe * 10) > (numTrame * numTrame)) {
-				numTrame++;
-				reste -= 8;
-			}
-			fleur += reste;
-			
-			System.out.println("vous pouvez acheter");
+		}
 
-			System.out.println(numCafe + "cafés");
-			System.out.println(numRecharge + "Carte de recharge prépayer");
-			System.out.println(numTrame + "billets de TRAME");
-			System.out.println("il vous restera " + fleur + "MAD pour les roses");
+		// la somme de cafés
+		int temp = reste / 3;
+		// calculer le numéro de cafés et recharges; 
+		while (temp >= cafe) {
+			numCafe++;
+			numRecharge++;
+			temp -= cafe;
+
+		}
+
+		fleur += (temp * 2);
+
+		// la some de trame
+		temp = reste / 3;
+		// calcule le numéro de trame ticket
+		while (temp >= recharge) {
+			numTrame++;
+			temp -= 8;
+		}
+		fleur += temp;
+
+			
+		System.out.println("vous pouvez acheter");
+
+		System.out.println(numCafe + " cafés");
+		System.out.println(numRecharge + " Carte de recharge prépayer");
+		System.out.println(numTrame + " billets de TRAME");
+		System.out.println("il vous restera " + fleur + " MAD pour les roses");
 		}
 
 
@@ -67,8 +73,6 @@ public class TanteFortunee {
 		
 
 		
-
-	}
 
 }
 
