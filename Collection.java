@@ -15,7 +15,7 @@ public class Collection<Item1, Item2> {
 	public static void main(String[] args) {
 
 		// Creating a list
-		List<String> ls = new ArrayList<String>();
+		ArrayList<String> ls = new ArrayList<String>();
 
 		ls.add("janvier");
 		ls.add("févier");
@@ -68,7 +68,7 @@ public class Collection<Item1, Item2> {
 		System.out.println("after sort " + ls);
 
 		// Cloner la liste dans une autre liste
-		List<String> cp = new ArrayList<String>(ls);
+		ArrayList<String> cp = new ArrayList<String>(ls);
 		// cp = ls.subList(0, ls.size());
 		// copier cette liste dans une autre
 		cp = ls;
