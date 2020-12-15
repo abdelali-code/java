@@ -19,8 +19,8 @@ public class Exercice2 {
 		
 		rex.nom = "Rex";
 		
-		rex.aboyer("hhhhhhhhhh");
-		rex.manger("GHHHHHHHH");
+		rex.aboyer("Je suis en colère. Ghhhhhhhhhh !!! WWWWOARF !! WWWWOARF !! -");
+		rex.manger("Je mange de la viande");
 
 	}
 
